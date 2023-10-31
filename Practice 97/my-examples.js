@@ -14,14 +14,56 @@
 // Виклик функції normalizeInput("Stay Awhile and Listen", "lower") повертає "stay awhile and listen"
 // Виклик функції normalizeInput("Stay Awhile and Listen", "upper") повертає "STAY AWHILE AND LISTEN"
 
-function normalizeInput(input, to) {
-  if (to === "upper") {
-    return input.slice().toUpperCase();
+// function normalizeInput(input, to) {
+//   if (to === "upper") {
+//     return input.slice().toUpperCase();
+//   } else {
+//     return input.slice().toLowerCase();
+//   }
+// }
+// console.log(normalizeInput("This ISN'T SpaM", "lower"));
+// console.log(normalizeInput("This ISN'T SpaM", "upper"));
+// console.log(normalizeInput("Stay Awhile and Listen", "lower"));
+// console.log(normalizeInput("Stay Awhile and Listen", "upper"));
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція getFileName(file) приймає один параметр
+
+// file - рядок з іменем файлу. Ім'я файлу може бути з розширенням, наприклад: styles.css, app.js або без, наприклад: styles, app.
+// Використовуючи методи indexOf та slice, доповни код функції таким чином, щоб:
+
+// Вона перевіряла наявність розширення в імені файлу (назва розширення відокремлюється від імені файла крапкою)
+// Якщо ім'я файлу не містить розширення, то функція повертала новий підрядок, що містить ім'я файлу без змін
+// В іншому разі функція повертала підрядок з іменем файлу, але без розширення
+// Оголошена функція getFileName(file)
+// Виклик функції getFileName("styles.css") повертає "styles"
+// Виклик функції getFileName("app.js") повертає "app"
+// Виклик функції getFileName("app") повертає "app"
+// Виклик функції getFileName("index.js") повертає "index"
+// Виклик функції getFileName("index.html") повертає "index"
+// Виклик функції getFileName("index.css") повертає "index"
+// Виклик функції getFileName("index") повертає "index"
+
+function getFileName(file) {
+  const fileIndex = file.indexOf(".");
+
+  if (file.includes(".")) {
+    return file.slice(0, fileIndex);
   } else {
-    return input.slice().toLowerCase();
+    return file;
   }
 }
-console.log(normalizeInput("This ISN'T SpaM", "lower"));
-console.log(normalizeInput("This ISN'T SpaM", "upper"));
-console.log(normalizeInput("Stay Awhile and Listen", "lower"));
-console.log(normalizeInput("Stay Awhile and Listen", "upper"));
+
+console.log(getFileName("styles.css")); // повертає "styles"
+console.log(getFileName("app.js")); // повертає "app"
+console.log(getFileName("styles")); // повертає "styles"
+console.log(getFileName("app")); // повертає "app"
+console.log(getFileName("index.js")); // повертає "index"
+console.log(getFileName("index.html")); // повертає "index"
+console.log(getFileName("index.css")); // повертає "app"
+console.log(getFileName("index")); // повертає "index"
