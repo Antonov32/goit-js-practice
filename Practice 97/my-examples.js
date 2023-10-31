@@ -49,21 +49,48 @@
 // Виклик функції getFileName("index.css") повертає "index"
 // Виклик функції getFileName("index") повертає "index"
 
-function getFileName(file) {
-  const fileIndex = file.indexOf(".");
+// function getFileName(file) {
+//   const fileIndex = file.indexOf(".");
 
-  if (file.includes(".")) {
-    return file.slice(0, fileIndex);
-  } else {
-    return file;
-  }
-}
+//   if (file.includes(".")) {
+//     return file.slice(0, fileIndex);
+//   } else {
+//     return file;
+//   }
+// }
 
-console.log(getFileName("styles.css")); // повертає "styles"
-console.log(getFileName("app.js")); // повертає "app"
-console.log(getFileName("styles")); // повертає "styles"
-console.log(getFileName("app")); // повертає "app"
-console.log(getFileName("index.js")); // повертає "index"
-console.log(getFileName("index.html")); // повертає "index"
-console.log(getFileName("index.css")); // повертає "app"
-console.log(getFileName("index")); // повертає "index"
+// console.log(getFileName("styles.css")); // повертає "styles"
+// console.log(getFileName("app.js")); // повертає "app"
+// console.log(getFileName("styles")); // повертає "styles"
+// console.log(getFileName("app")); // повертає "app"
+// console.log(getFileName("index.js")); // повертає "index"
+// console.log(getFileName("index.html")); // повертає "index"
+// console.log(getFileName("index.css")); // повертає "app"
+// console.log(getFileName("index")); // повертає "index"
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція createFileName(name, ext) приймає два параметри:
+
+// name - рядок, що зберігає ім'я файлу без розширення, яке вводить користувач. Воно може містити зайві пробіли на початку або в кінці рядка, наприклад "order ", " finance " тощо
+// ext - рядок, що зберігає розширення, наприклад "txt", "xml" тощо
+// Використовуючи синтаксис шаблонних рядків і метод trim(), доповни код функції таким чином, щоб вона повертала повне (об'єднане) ім'я файлу з доданим розширенням, зазначеним у параметрі ext у форматі ім'я.розширення. Також повне ім'я файлу не повинно містити зайвих пробілів на початку або наприкінці.
+
+// Оголошена функція createFileName(name, ext)
+// Виклик функції createFileName(" order ", "txt") повертає "order.txt"
+// Виклик функції createFileName(c) повертає "report.csv"
+// Виклик функції createFileName(" presentation", "xml") повертає "presentation.xml"
+
+// function createFileName(name, ext) {
+//   const trimmedName = name.trim();
+//   const trimmedExt = ext.trim();
+//   return `${trimmedName}.${trimmedExt}`;
+// }
+
+// console.log(createFileName(" order ", "txt")); // повертає "order.txt"
+// console.log(createFileName("report ", "csv")); // повертає "report.csv"
+// console.log(createFileName(" presentation", "xml")); // повертає "presentation.xml"
