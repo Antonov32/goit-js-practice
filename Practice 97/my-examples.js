@@ -94,3 +94,61 @@
 // console.log(createFileName(" order ", "txt")); // повертає "order.txt"
 // console.log(createFileName("report ", "csv")); // повертає "report.csv"
 // console.log(createFileName(" presentation", "xml")); // повертає "presentation.xml"
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція calculateTotal(number) приймає ціле число (параметр number). Доповни код функції так, щоб вона повертала суму всіх цілих чисел від одиниці до цього числа включно. Наприклад, якщо number дорівнює 3, то сума - це 1 + 2 + 3, тобто 6.
+
+// Оголошена функція calculateTotal(number)
+// Виклик функції calculateTotal(1) повертає 1
+// Виклик функції calculateTotal(3) повертає 6
+// Виклик функції calculateTotal(0) повертає 0
+// Виклик функції calculateTotal(18) повертає 171
+// Виклик функції calculateTotal(24) повертає 300
+// Виклик функції calculateTotal() з випадковим числом повертає правильне значення
+
+// function calculateTotal(number) {
+//   let result = 0;
+//   let index = 0;
+//   while (number > index) {
+//     index += 1;
+//     result += index;
+//   }
+//   return result;
+// }
+
+// console.log(calculateTotal(1)); // повертає 1
+// console.log(calculateTotal(3)); // повертає 6
+// console.log(calculateTotal(0)); // повертає 0
+// console.log(calculateTotal(18)); // повертає 171
+// console.log(calculateTotal(24)); // повертає 300
+// console.log(calculateTotal()); // повертає правильне значення
+
+//*
+//
+// ------------------------------------------------------------
+//
+//*
+
+// Функція calculateEvenTotal(number) приймає ціле число (параметр number). Доповни код функції так, щоб вона повертала суму всіх парних цілих чисел від одиниці до цього числа включно. Парні числа — це ті, що можна поділити на 2 без остачі (як це зробити розглядалося у темі Арифметичні операції у модулі 1). Наприклад, якщо number дорівнює 6, то сума - це 2 + 4 + 6, тобто 12.
+
+function calculateEvenTotal(number) {
+  let result = 0;
+  let index = 0;
+  for (let i = 0; i < number; i--) {
+    index += 1;
+    result += index;
+  }
+  return result;
+}
+
+console.log(calculateEvenTotal(1)); // повертає 0
+console.log(calculateEvenTotal(3)); // повертає 2
+console.log(calculateEvenTotal(7)); // повертає 12
+console.log(calculateEvenTotal(18)); // повертає 90
+console.log(calculateEvenTotal(27)); // повертає 182
+console.log(calculateEvenTotal()); // з випадковим числом повертає правильне значення
